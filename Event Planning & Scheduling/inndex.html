@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Event Planning & Scheduling</h1>
+        </header>
+
+        <section class="event-schedule">
+            <h2>Step 1: Schedule Your Event</h2>
+            <form id="eventForm">
+                <label for="eventTitle">Event Title:</label>
+                <input type="text" id="eventTitle" placeholder="Enter event title" required>
+
+                <label for="startTime">Start Time:</label>
+                <input type="datetime-local" id="startTime" required>
+
+                <label for="endTime">End Time:</label>
+                <input type="datetime-local" id="endTime" required>
+
+                <button class="animated-button" type="submit">
+                    <span class="text">Schedule Event</span>
+                </button>
+            </form>
+        </section>
+
+        <section id="calendarView">
+            <h2>Your Event Calendar</h2>
+            <div id="eventList"></div>
+        </section>
+
+        <section class="budget-tracker">
+            <h2>Step 2: Track Your Budget</h2>
+            <label for="budget">Enter Your Event Budget:</label>
+            <input type="number" id="budget" placeholder="Enter total budget" required>
+
+            <button class="animated-button" type="button" id="addExpense">
+                <span class="text">Add Expense</span>
+            </button>
+
+            <div class="expenses">
+                <h3>Expenses</h3>
+                <ul id="expenseList"></ul>
+                <h3>Total Remaining Budget: $<span id="totalBudget">0.00</span></h3>
+            </div>
+        </section>
+
+        <section class="client-chat">
+            <h2>Step 3: Client Communication</h2>
+            <div class="chat-box">
+                <div id="chatBox"></div>
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button class="animated-button" id="sendMessage">
+                    <span class="text">Send Message</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="vendor-selection">
+            <h2>Step 4: Select a Vendor</h2>
+            <label for="vendorSelect">Choose a Vendor:</label>
+            <select id="vendorSelect">
+                <option value="Vendor A">Vendor A</option>
+                <option value="Vendor B">Vendor B</option>
+                <option value="Vendor C">Vendor C</option>
+            </select>
+
+            <button class="animated-button" type="button" id="selectVendor">
+                <span class="text">Select Vendor</span>
+            </button>
+
+            <h3></h3>
+            <input type="text" id="customVendor" placeholder="Enter vendor name" style="display: none;">
+            <button class="animated-button" type="button" id="addCustomVendor" style="display: none;">
+                <span class="text">Add Custom Vendor</span>
+            </button>
+
+            <div id="vendorList">
+                <h3>Selected Vendors:</h3>
+                <ul id="selectedVendors"></ul>
+            </div>
+        </section>
+
+        <section class="notifications">
+            <h2>Step 5: Send Notifications</h2>
+            <button class="animated-button" id="notify">
+                <span class="text">Send Notification</span>
+            </button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
